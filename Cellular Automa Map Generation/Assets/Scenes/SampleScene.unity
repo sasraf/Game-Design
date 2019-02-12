@@ -242,8 +242,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   height: 60
   width: 80
-  useRandomSeed: 1
-  seed: 
+  useRandomSeed: 0
+  seed: hdwbvbksd
   fillPercent: 46
 --- !u!114 &1906770294
 MonoBehaviour:
