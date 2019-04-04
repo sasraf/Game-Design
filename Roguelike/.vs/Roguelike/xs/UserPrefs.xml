@@ -1,0 +1,17 @@
+﻿<Properties StartupConfiguration="{3B4D7A7B-B193-C7B8-731F-3F701A73DF6D}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MovingObject.cs">
+    <Files>
+      <File FileName="Assets/Scripts/BoardManager.cs" Line="7" Column="26" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="33" Column="25" />
+      <File FileName="Assets/Scripts/Loader.cs" Line="18" Column="1" />
+      <File FileName="Assets/Scripts/MovingObject.cs" Line="5" Column="51" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
