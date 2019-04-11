@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Enemy : MovingObject
 {
-    public int playerDamage;private Animator animator;
+    public int playerDamage;
+
+    private Animator animator;
     private Transform target;
     private bool skipMove;
 

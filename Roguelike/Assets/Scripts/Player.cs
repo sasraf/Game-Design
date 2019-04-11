@@ -36,15 +36,15 @@ public class Player : MovingObject
         int horizontal = 0;
         int vertical = 0;
 
-        horizontal = (int)Input.GetAxisRaw("Horizontal");
-        vertical = (int)Input.GetAxisRaw("Vertical");
+        horizontal = (int)(Input.GetAxisRaw("Horizontal"));
+        vertical = (int)(Input.GetAxisRaw("Vertical"));
 
         if (horizontal != 0)
         {
             vertical = 0;
         }
 
-        if (vertical != 0 || vertical != 0)
+        if (horizontal != 0 || vertical != 0)
         {
             AttemptMove<Wall>(horizontal, vertical);
         }
