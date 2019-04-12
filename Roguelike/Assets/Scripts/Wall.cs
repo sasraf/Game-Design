@@ -1,35 +1,28 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-namespace Completed
+public class Wall : MonoBehaviour
 {
-    public class Wall : MonoBehaviour
+    public Sprite dmgSprite;
+    public int hp = 4;
+
+    private SpriteRenderer spriteRenderer;
+
+    // Start is called before the first frame update
+    void Awake()
     {
-        public AudioClip chopSound1;            
-        public AudioClip chopSound2;             
-        public Sprite dmgSprite;                  
-        public int hp = 3;                   
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
 
+    public void DamageWall (int loss)
+    {
+        spriteRenderer.sprite = dmgSprite;
+        hp -= loss;
 
-        private SpriteRenderer spriteRenderer;      
-
-
-        void Awake()
+        if (hp <= 0)
         {
-            spriteRenderer = GetComponent<SpriteRenderer>();
-        }
-
-
-        public void DamageWall(int loss)
-        {
-            SoundManager.instance.RandomizeSfx(chopSound1, chopSound2);
-
-            spriteRenderer.sprite = dmgSprite;
-
-            hp -= loss;
-
-            if (hp <= 0)
-                gameObject.SetActive(false);
+            gameObject.SetActive(false);
         }
     }
 }
