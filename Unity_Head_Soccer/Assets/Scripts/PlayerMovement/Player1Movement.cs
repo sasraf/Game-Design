@@ -10,36 +10,63 @@ public class Player1Movement : MonoBehaviour {
 
 	private Rigidbody2D rb2d;       // Store a reference to the Rigidbody2D component required to use 2D Physics.
 
+	private int facing;
+
 	// Use this for initialization
 	void Start()
 	{
 		//G et and store a reference to the Rigidbody2D component so that we can access it.
 		rb2d = GetComponent<Rigidbody2D> ();
+
+		facing = -1;
 	}
 		
+	private void Flip()
+	{
+		// Multiply the player's x local scale by -1.
+		Vector3 theScale = transform.localScale;
+		theScale.x *= -1;
+		transform.localScale = theScale;
+		facing = facing * -1;
+	}
 
 	// FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
 	void FixedUpdate()
 	{
 		// Sets vector movement to 0
-		Vector2 movement = new Vector2 (0, 0);
+		int movement = 0;
+		float yVelocity = rb2d.velocity.y;
 
 		// Checks if left key is being pressed down
 		if (Input.GetKey (KeyCode.LeftArrow)) {
-			movement = new Vector2 (-1, 0);
+
+			// If facing the other way, flip
+			if (facing != -1) {
+				Flip ();
+			}
+
+			movement = -1;
 		} 
 
 		// Checks if right arrow is being pressed down
 		else if (Input.GetKey (KeyCode.RightArrow)) {
-			movement = new Vector2 (1, 0);	
+
+			// If facing the other way, flip
+			if (facing != 1) {
+				Flip ();
+			}
+				
+			movement = 1;
 		} 
 
 		// Checks if space is pressed
-		if (Input.GetKeyDown(KeyCode.Keypad0) && rb2d.velocity.y == 0) {
-			movement = new Vector2 (0, jump);
+		if (Input.GetKeyDown(KeyCode.UpArrow) && rb2d.velocity.y == 0) {
+
+			// Adds jump to current yVelocity
+			yVelocity = jump + yVelocity;
 		}
 
-		// Applies movement vector to rigidbody.
-		rb2d.AddForce (movement * speed);
+		// Apply velocity
+		rb2d.velocity = new Vector2(movement * speed, yVelocity);
 	}
 }

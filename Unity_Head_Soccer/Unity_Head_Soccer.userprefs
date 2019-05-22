@@ -1,9 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerMovement/Player1Movement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CharacterManager/CharacterManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/PlayerMovement/Player1Movement.cs" Line="37" Column="32" />
-      <File FileName="Assets/Scripts/PlayerMovement/Player2Movement.cs" Line="8" Column="2" />
+      <File FileName="Assets/Scripts/CharacterManager/CharacterInfo.cs" Line="13" Column="1" />
+      <File FileName="Assets/Scripts/PlayerMovement/Player1Movement.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PlayerMovement/Player2Movement.cs" Line="14" Column="2" />
+      <File FileName="Assets/Scripts/CharacterManager/CharacterSelect.cs" Line="12" Column="16" />
+      <File FileName="Assets/Scripts/CharacterManager/CharacterManager.cs" Line="92" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
