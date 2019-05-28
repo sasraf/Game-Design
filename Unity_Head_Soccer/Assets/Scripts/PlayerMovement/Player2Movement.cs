@@ -10,7 +10,11 @@ public class Player2Movement : MonoBehaviour {
 
 	private Rigidbody2D rb2d;       // Store a reference to the Rigidbody2D component required to use 2D Physics.
 
-	private int facing;
+    public bool canShoot;           // Bool variable to check if you can shoot
+
+    private GameObject ball;        // Game object variable to track the ball
+
+    private int facing;
 
 	// Use this for initialization
 	void Start()
@@ -68,5 +72,10 @@ public class Player2Movement : MonoBehaviour {
 
 		// Apply velocity
 		rb2d.velocity = new Vector2(movement * speed, yVelocity);
-	}
+
+        if (canShoot == true && Input.GetKey(KeyCode.P))
+        {
+            ball.GetComponent<Rigidbody2D>().AddForce(new Vector2(-400, 500));
+        }
+    }
 }

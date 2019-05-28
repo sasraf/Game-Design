@@ -51,12 +51,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\BallScript.cs" />
      <Compile Include="Assets\Scripts\CharacterManager\CharacterManager.cs" />
      <Compile Include="Assets\Scripts\CharacterManager\CharacterSelect.cs" />
+     <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\MenuScript.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement\Player1Movement.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement\Player2Movement.cs" />
      <Compile Include="Assets\Scripts\SelectionScript.cs" />
+     <Compile Include="Assets\Scripts\StartButtonScript.cs" />
+     <Compile Include="Assets\Scripts\TextChanger.cs" />
  <Reference Include="Facebook.Unity.Settings">
  <HintPath>/Users/2024210/Desktop/GitHub/Game-Design/Unity_Head_Soccer/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>

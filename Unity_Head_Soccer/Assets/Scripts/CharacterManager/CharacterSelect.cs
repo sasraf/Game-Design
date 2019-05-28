@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class CharacterSelect : MonoBehaviour {
 
-	public string characterName = gameObject.name;
+	public string characterName;
+
+//	void Start()
+//	{
+//		characterName = gameObject.name;
+//	}
+		
 
 	public bool Clicked()
 	{

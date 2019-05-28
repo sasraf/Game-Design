@@ -3,7 +3,19 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ball
+  - Player2
+  - LeftGoal
+  - RightGoal
+  - France
+  - Germany
+  - Germany2
+  - Llama
+  - Norway
+  - Squidward
+  - SelectionText
+  - CharacterManager
   layers:
   - Default
   - TransparentFX
@@ -13,8 +25,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Player1
+  - Player2
   - 
   - 
   - 
@@ -53,6 +65,9 @@ TagManager:
   - name: RightGoal
     uniqueID: 3423340071
     locked: 0
-  - name: Player
+  - name: Player1
     uniqueID: 3526973237
+    locked: 0
+  - name: Player2
+    uniqueID: 240190065
     locked: 0

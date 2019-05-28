@@ -8,6 +8,10 @@ public class Player1Movement : MonoBehaviour {
 
 	public float jump;				// Floating point variable to store the player's jump speed.
 
+    public bool canShoot;           // Bool variable to check if you can shoot
+
+    private GameObject ball;        // Game object variable to track the ball
+
 	private Rigidbody2D rb2d;       // Store a reference to the Rigidbody2D component required to use 2D Physics.
 
 	private int facing;
@@ -16,11 +20,12 @@ public class Player1Movement : MonoBehaviour {
 	void Start()
 	{
 		//G et and store a reference to the Rigidbody2D component so that we can access it.
-		rb2d = GetComponent<Rigidbody2D> ();
-
+		rb2d = GetComponent<Rigidbody2D>();
+        ball = GameObject.FindGameObjectWithTag("Ball");
 		facing = -1;
 	}
-		
+
+	// Changes direction of player model
 	private void Flip()
 	{
 		// Multiply the player's x local scale by -1.
@@ -69,4 +74,12 @@ public class Player1Movement : MonoBehaviour {
 		// Apply velocity
 		rb2d.velocity = new Vector2(movement * speed, yVelocity);
 	}
+
+    public void hitBall()
+    {
+        if (canShoot == true && Input.GetKeyDown(KeyCode.Space))
+        {
+            ball.GetComponent<Rigidbody2D>().AddForce(new Vector2(-400, 500));
+        }
+    }
 }
